@@ -9,6 +9,7 @@
 import Foundation
 
 protocol CountdownDelegate: AnyObject {
+    //communicate time
     func countdownDidUpdate(timeRemaining: TimeInterval)
     func countdownDidFinish()
 }
@@ -69,6 +70,7 @@ class Countdown {
         stopDate = nil
         cancelTimer()
         state = .reset
+        start()
     }
     
     func cancelTimer() {
